@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 200px;
+        height: 100px;
+        background-color: crimson;
+      }
+      h1 {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>É par ou é ímpar?</h1>
+
+    <button onclick="Result()">Clique para iniciar</button>
+
+    <p id="outText">O resultado vai aparecer aqui</p>
+
+    <script>
+      function Result() {
+        let num = Number(prompt("Digite um numero"));
+        let tipo;
+
+        if (num % 2 === 0) {
+          tipo = "É PAR";
+        } else {
+          tipo = "É IMPAR";
+        }
+
+        let res = (document.getElementById("outText").innerHTML = `
+        O número ${num} que foi digitado é ${tipo}!`);
+      }
+    </script>
+  </body>
+</html>

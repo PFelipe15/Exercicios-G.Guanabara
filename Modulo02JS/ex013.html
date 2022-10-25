@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 200px;
+        height: 100px;
+        background-color: crimson;
+      }
+      h1 {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Maior Valor</h1>
+
+    <button onclick="test()">Clique para começar</button>
+
+    <p id="outResult">O resultado vai aparecer aqui..</p>
+
+    <script>
+      function test() {
+        let num1, num2;
+
+        num1 = parseFloat(prompt("Digite um numero: "));
+        num2 = parseFloat(prompt("Digite um numero: "));
+
+        let result;
+
+        if (num1 > num2) {
+          result = `O maior valor é ${num1}`;
+        } else {
+          if (num2 > num1) {
+            result = `O maior valor é ${num2}`;
+          } else {
+            result = "Os valores são iguais!";
+
+            
+          }
+
+          
+        }
+        let res = document.getElementById('outResult').innerHTML = `Analisando os valores ${num1} e ${num2}, ${result}`
+      }
+    </script>
+  </body>
+</html>

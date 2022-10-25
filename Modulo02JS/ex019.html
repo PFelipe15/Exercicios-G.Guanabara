@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: aqua;
+        font-family: fantasy;
+      }
+
+      .container01 {
+        background-color: black;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        height: 50px;
+      }
+
+      button {
+        width: 200px;
+        height: 100px;
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container01">
+      <h1>Multiplas ações</h1>
+    </div>
+
+    <button onclick="calculo()">Clique para começar</button>
+
+    <p id="result">Clique no botão para começar.</p>
+    <script>
+      function calculo() {
+        let num1 = Number(prompt("Primeiro Valor"));
+        let num2 = Number(prompt("Segundo Valor"));
+
+        let typeCal = Number(
+          prompt(`Valores informado: ${num1} e ${num2}
+                     O que vamos fazer?
+                     [1] Somar
+                     [2] Subtrair
+                     [3] Multiplicar
+                     [4] Dividir
+                      `)
+        );
+        let resposta;
+        switch (typeCal) {
+          default:
+            resposta = `OPÇÃO INVÁLIDA! Você digitou ${num1} e ${num2}, mas não sei o que fazer com eles.`;
+            break;
+
+          case 1:
+            resposta = `${num1} + ${num2} = ${num1 + num2}`;
+            break;
+          case 2:
+            resposta = `${num1} - ${num2} = ${num1 - num2}`;
+            break;
+          case 3:
+            resposta = `${num1} x ${num2} = ${num1 * num2}`;
+            break;
+          case 4:
+            resposta = `${num1} / ${num2} = ${num1 / num2}`;
+            break;
+        }
+        let res = (document.getElementById("result").innerHTML = resposta);
+      }
+    </script>
+  </body>
+</html>

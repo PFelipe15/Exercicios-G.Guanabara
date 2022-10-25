@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 200px;
+        height: 100px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Somando dois numeros</h2>
+
+    <button onclick="Soma()">Iniciar Soma</button>
+
+    <p id="resultado">o Resultado vem aqui</p>
+    <script>
+      function Soma() {
+        let num1, num2;
+        num1 = parseInt(prompt("Digite um numero"));
+        num2 = parseInt(prompt("Digite um outro numero pra ser somado!"));
+        let res = document.getElementById("resultado");
+        res.innerHTML = ` A soma ente <mark>${num1} <mark/> e ${num2} é = ${
+          num1 + num2
+        }`;
+      }
+    </script>
+  </body>
+</html>
